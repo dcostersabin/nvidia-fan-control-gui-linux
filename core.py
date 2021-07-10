@@ -10,7 +10,9 @@ import time
 # root frame
 root = tk.Tk()
 root.title("Nvidia Fan Control")
-root.geometry("600x600")
+root.geometry("750x600")
+
+font_tuple = ("Ubuntu Mono", 12, "bold")
 
 # user info frame
 user_cred = tk.Frame(root)
@@ -29,6 +31,8 @@ nvidia_smi = tk.Frame(root, pady=50)
 nvidia_smi.pack(anchor=tk.CENTER)
 
 smi_label = tk.Label(nvidia_smi, text="", bg='white', fg='green')
+
+smi_label.config(font = font_tuple)
 
 speed_label = tk.Label(nvid, text="")
 
